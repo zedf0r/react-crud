@@ -74,38 +74,40 @@ export const PostEdit = () => {
     return <p>Загрузка</p>;
   }
 
+  if (showEditPost) {
+    return (
+      <>
+        <div className="post-edit__header">
+          <p>Редактировать публикацию</p>
+          <div className="new-post__header-close" onClick={handleClick}>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <EditPost
+          post={post}
+          handleChange={handleChange}
+          handleSave={handleSave}
+        />
+      </>
+    );
+  }
+
   return (
     <div className="main__container">
-      {showEditPost ? (
-        <>
-          <div className="post-edit__header">
-            <p>Редактировать публикацию</p>
-            <div className="new-post__header-close" onClick={handleClick}>
-              <div></div>
-              <div></div>
-            </div>
-          </div>
-          <EditPost
-            post={post}
-            handleChange={handleChange}
-            handleSave={handleSave}
-          />
-        </>
-      ) : (
-        <Post post={post}>
-          <div className="edit-buttons">
-            <Button onClick={handleClick}>Изменить</Button>
-            <Button
-              className="btn-delete"
-              onClick={(event) => {
-                handleDelete(event);
-              }}
-            >
-              Удалить
-            </Button>
-          </div>
-        </Post>
-      )}
+      <Post post={post}>
+        <div className="edit-buttons">
+          <Button onClick={handleClick}>Изменить</Button>
+          <Button
+            className="btn-delete"
+            onClick={(event) => {
+              handleDelete(event);
+            }}
+          >
+            Удалить
+          </Button>
+        </div>
+      </Post>
     </div>
   );
 };
