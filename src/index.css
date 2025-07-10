@@ -1,0 +1,281 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  appearance: none;
+  border: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overscroll-behavior: none;
+  font-family: sans-serif;
+  padding: 50px;
+}
+
+a {
+  color: #000;
+}
+
+.main__container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  border: 1px solid #afafaf;
+  border-radius: 12px;
+  padding: 5px;
+  width: 800px;
+}
+
+.container__box-new-post {
+  padding: 10px;
+  background-color: #fff;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn__new-post {
+  background-color: #4469ae;
+  padding: 5px 10px;
+  border-radius: 3px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.container__posts {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.post {
+  background-color: #fff;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  border: 1px solid #afafaf;
+  border-radius: 12px;
+}
+
+.post__personal {
+  display: flex;
+  justify-content: space-between;
+}
+
+.post__personal-info {
+  display: flex;
+  column-gap: 15px;
+}
+
+.personal-info--image {
+  width: 40px;
+  height: 40px;
+  background: gray;
+  border-radius: 25px;
+}
+
+.personal-info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+
+.personal-info__name {
+  color: #4469ae;
+  font-weight: 600;
+}
+
+.personal-info__status {
+  display: flex;
+  column-gap: 10px;
+  font-weight: 600;
+  color: #7e7e7e;
+}
+
+.personal-info__time-published {
+  font-weight: 400;
+}
+
+.post__hide {
+  position: relative;
+}
+
+.post__hide > div {
+  width: 2px;
+  height: 9px;
+  background-color: #7e7e7e;
+}
+
+.post__hide > div:first-child {
+  transform: rotate(40deg);
+  position: absolute;
+  top: 0;
+}
+
+.post__hide > div:last-child {
+  transform: rotate(-40deg);
+  position: absolute;
+  top: 0;
+  left: -5px;
+}
+
+.post__text {
+  font-size: 24px;
+}
+
+.post__interaction {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  color: #7e7e7e;
+  font-weight: 600;
+  position: relative;
+  padding: 15px 0 0;
+}
+
+.post__interaction::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  border-top: 1px solid #7e7e7e;
+}
+
+.interaction-like {
+  width: 50%;
+  cursor: pointer;
+}
+
+.interaction-comment {
+  width: 50%;
+  cursor: pointer;
+}
+
+.new-post {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  background-color: #fff;
+  padding: 15px;
+}
+
+.new-post__header {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 0 0 15px;
+}
+
+.new-post__header::before {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  border: 1px solid #7e7e7e;
+}
+
+.new-post__header-type > p {
+  cursor: pointer;
+}
+
+.new-post__header-close {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.new-post__header-close > div {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  width: 15px;
+  border: 1px solid #7e7e7e;
+}
+
+.new-post__header-close > div:first-child {
+  transform: rotate(45deg);
+}
+
+.new-post__header-close > div:last-child {
+  transform: rotate(135deg);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+.form-info {
+  display: flex;
+  column-gap: 30px;
+  justify-content: space-between;
+}
+
+.post-textarea {
+  resize: none;
+  border: 1px solid #7e7e7e;
+  width: 90%;
+  padding: 10px 15px;
+  font-size: 24px;
+}
+
+.btn-submit {
+  padding: 5px 15px;
+  background-color: #4469ae;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  width: 160px;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+.edit-buttons {
+  display: flex;
+  column-gap: 20px;
+  justify-content: flex-end;
+  padding: 0 15px;
+}
+
+.btn-delete {
+  background-color: #ff3535;
+}
+
+.post-edit__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+
+.post-edit__main {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 30px;
+}
+
+.post-edit__textarea {
+  flex: 0 1 90%;
+  font-size: 24px;
+  border: 1px solid #000;
+  padding: 5px 15px;
+}
