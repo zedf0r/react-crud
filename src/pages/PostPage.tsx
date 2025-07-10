@@ -34,10 +34,6 @@ export const PostEdit = () => {
       });
   }, [id]);
 
-  if (isLoading) {
-    return <p>Загрузка</p>;
-  }
-
   const handleDelete = (event: React.MouseEvent) => {
     event.preventDefault();
 
@@ -73,6 +69,10 @@ export const PostEdit = () => {
       content: event.target.value,
     }));
   };
+
+  if (isLoading) {
+    return <p>Загрузка</p>;
+  }
 
   return (
     <div className="main__container">

@@ -16,7 +16,10 @@ export const EditPost: React.FC<TypeEditPost> = ({
 }) => {
   return (
     <div className="post">
-      <PostForm message={post.content} evt={(event) => handleChange(event)} />
+      <PostForm
+        message={post.content}
+        onChange={(event) => handleChange(event)}
+      />
       <Button onClick={handleSave}>Сохранить</Button>
     </div>
   );

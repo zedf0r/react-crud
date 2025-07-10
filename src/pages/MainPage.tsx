@@ -17,7 +17,6 @@ export const MainPage = () => {
         setPosts(data);
       });
       setIsLoading(false);
-      setIsError(false);
     } catch (error) {
       setIsError(true);
       throw new Error(`Ошибка ${error}`);
