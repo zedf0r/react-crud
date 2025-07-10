@@ -1,15 +1,19 @@
 export const Button = ({
-  text,
+  children,
   className,
-  evt,
+  onClick,
 }: {
-  text: string;
+  children: React.ReactNode;
   className?: string;
-  evt: (event: React.MouseEvent) => void;
+  onClick: (event: React.MouseEvent) => void;
 }) => {
   return (
-    <button className={`btn-submit ${className}`} type="button" onClick={evt}>
-      {text}
+    <button
+      className={`btn-submit ${className}`}
+      type="button"
+      onClick={onClick}
+    >
+      {children}
     </button>
   );
 };

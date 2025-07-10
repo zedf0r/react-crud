@@ -1,4 +1,4 @@
-import { Button, Image } from "../components";
+import { Button, PostForm } from "../components";
 import type { TypePost } from "../types/Posts.types";
 
 type TypeEditPost = {
@@ -16,15 +16,8 @@ export const EditPost: React.FC<TypeEditPost> = ({
 }) => {
   return (
     <div className="post">
-      <div className="post-edit__main">
-        <Image />
-        <textarea
-          className="post-edit__textarea"
-          value={post.content}
-          onChange={handleChange}
-        />
-      </div>
-      <Button text="Сохранить" evt={handleSave} />
+      <PostForm message={post.content} evt={(event) => handleChange(event)} />
+      <Button onClick={handleSave}>Сохранить</Button>
     </div>
   );
 };

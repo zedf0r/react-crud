@@ -6,7 +6,7 @@ function App() {
     <Routes>
       <Route path="/" element={<MainPage />} />
       <Route path="/posts/new" element={<NewPostPage />} />
-      <Route path="posts/:id" element={<PostEdit />} />
+      <Route path="/posts/:id" element={<PostEdit />} />
     </Routes>
   );
 }

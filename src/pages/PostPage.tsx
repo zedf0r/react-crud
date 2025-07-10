@@ -94,14 +94,15 @@ export const PostEdit = () => {
       ) : (
         <Post post={post}>
           <div className="edit-buttons">
-            <Button text="Изменить" evt={handleClick} />
+            <Button onClick={handleClick}>Изменить</Button>
             <Button
-              text="Удалить"
               className="btn-delete"
-              evt={(event) => {
+              onClick={(event) => {
                 handleDelete(event);
               }}
-            />
+            >
+              Удалить
+            </Button>
           </div>
         </Post>
       )}

@@ -217,13 +217,13 @@ a {
   transform: rotate(135deg);
 }
 
-.form {
+.box {
   display: flex;
   flex-direction: column;
   row-gap: 15px;
 }
 
-.form-info {
+.box-info {
   display: flex;
   column-gap: 30px;
   justify-content: space-between;

@@ -7,19 +7,19 @@ import type { TypePost } from "../types/Posts.types";
 
 export const MainPage = () => {
   const [posts, setPosts] = useState<TypePost[]>([]);
-  const [isLoading, setLoading] = useState(false);
-  const [isError, setError] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isError, setIsError] = useState(false);
 
   useEffect(() => {
     try {
-      setLoading(true);
+      setIsLoading(true);
       fetchApi("/posts", "GET").then((data) => {
         setPosts(data);
       });
-      setLoading(false);
-      setError(false);
+      setIsLoading(false);
+      setIsError(false);
     } catch (error) {
-      setError(true);
+      setIsError(true);
       throw new Error(`Ошибка ${error}`);
     }
   }, []);
